@@ -2,6 +2,10 @@
     background-size: cover
     background-position: center
 
+@mixin max-width-and-height
+    width: 100%
+    height: 100%
+
 body, html
     margin: 0
     padding: 0
@@ -24,6 +28,18 @@ header
 main
     margin-top: 3em
 
+.font-corben
+    font-family: 'Corben', cursive
+
+.font-mulish
+    font-family: 'Mulish', sans-serif
+
+.light
+    color: white
+
+.dark
+    color: #333350
+
 .logo-nav-wrapper
     display: flex
     justify-content: space-between
@@ -41,23 +57,44 @@ div
 .first-section__left-subsection
     background-image: url("../assets/img/first-section/first-section__left-subsection.jfif")
     @include center-image
+    margin-right: 0.7em
+
+.first-section__left-subsection__layer
+    background-color: rgba(0, 0, 0, 0.25)
+    @include max-width-and-height
 
 .first-section__right-subsection
     display: grid
     grid-template-columns: 1fr 1fr
     grid-template-rows: 1fr 1fr
+    margin-left: 0.7em
 
 .first-section__right-subsection__top-left
     background-image: url("../assets/img/first-section/first-section__right-subsection__top-left.jfif")
     @include center-image
 
+.first-section__right-subsection__top-left__layer
+    background-color: rgba(21, 35, 235, 0.8)
+    @include max-width-and-height
+
+.first-section__right-subsection__top-right
+    background-color: #FFB469
+
 .first-section__right-subsection__bottom-left
     background-image: url("../assets/img/first-section/first-section__right-subsection__bottom-left.jfif")
     @include center-image
 
+.first-section__right-subsection__bottom-left__layer
+    background-color: rgba(119, 0, 193, 0.8)
+    @include max-width-and-height
+
 .first-section__right-subsection__bottom-right
     background-image: url("../assets/img/first-section/first-section__right-subsection__bottom-right.jfif")
     @include center-image
+
+.first-section__right-subsection__bottom-right__layer
+    background-color: rgba(247, 148, 217, 0.8)
+    @include max-width-and-height
 
 .second-section
     margin: 0 7em
